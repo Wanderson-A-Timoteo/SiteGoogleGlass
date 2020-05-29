@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* Define uma importação de fonte do google fontes */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
+
+/* Define uma fonte externa que podemos usar */
+@font-face {
+    font-family: 'FonteLogo'; /* Define um nome para identificação */
+    src: url("../_fonts/bubblegum-sans-regular.otf"); /* Define a localização da fonte dentro do projeto */
+}
+
+/* Define  */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #dddddd; /* Define a cor de fundo da pagina */
+    color: rgba(0, 0, 0, 1); /* Define a cor preto r=0 g=0 b=0 e a=1, ou seja, a=1 significa 100% de transparencia  */
+}
+
+/* Definindo as caracteristicas da interface */
+div#interface{
+    width: 1200px;
+    background-color: #ffffff;
+    margin: -10px auto 0px auto; /* Define uma margem de -10px para o conteiner da div ficar colada no topo da pagina,
+                                    margem zero(0) para a parte de baixo e automatico para as laterais  */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Define um sombreamento em tudo o conteiner div  */
+    padding: 10px; /* Define um espaçamento entre o texto e as paredes do site,
+        quando definimos apenas um padding de 10px é automaticamente definido todos os lados com os mesmos parametros */
+}
+
+p{
+    text-align: justify; /* Define o texto nos paragrafos com a quebra de espaço no texto*/
+    text-indent: 50px; /* Define   */
+}
+/* Definindo as caracteristicas de todos os links */
+a {
+    color: #606060; /* Definindo a cor do link como cinza escuro */
+    text-decoration: none; /* Definindo o link sem sublinhado */
+}
+
+/* Definindo que os links ficarão sublinhados quando passar o mouse por cima */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Definindo as caracteristicas da imagem oculos que esta dentro do cabeçalho */
+header#cabecalho img#icone{
+    position: absolute; /* Define a Imagem do oculos como absolute, assim podemos mover ela para onde desejarmos,
+                        dessa forma ela não sofrerá alteração do conteiner div que é relative */
+    left: 1110px; /* Define que a Imagem do oculos ficará a 900 pixels a esquerda do site,
+                    lembrando que definimos o site com 1000px em div#interface */
+    top: 80px; /* Definindo a posição do oculos a 50px do topo da pagina */
+
+}
+
+/* Definindo as caracteristicas dos objetos do cabeçalho */
+header#cabecalho{
+    border-bottom: 1px #606060 solid; /* Definindo uma linha em baixo do cabeçalho fina apenas 1px de cor cinza */
+    height: 150px; /* Definindo a altura do cabeçalho em 150px */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Definindo uma imagem com fundo do cabeçalho,
+    porém devido a img ser pequena ela se repete varias vezes dentro do cabeçalho, e a função no-repeat não deixa isso ocorrer.
+    A img fica no topo da pg e para colocarmos onde desejamos percisamos definir outros parametros deslocação lateral
+    não será preciso por isso ficará em 0px e o deslocamento vertical que é o que precisamos, para descer a img até onde queremos
+    ficará em 80px, isso deixará a img acima da linha que criamos */
+
+}
+
+/* Definindo as caracteristicas dos objetos h1 do cabeçalho */
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif; /* Define a importação de fonte do google fontes */
+    font-size: 30pt; /* Definindo o tamanho da fonte em 30 pontos */
+    color: #606060; /* Definindo a cor do texto em cinza escuro */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6); /* Definindo uma sombra no texto h1 com 1px de deslocamento, 1px de deslocamento
+     vertical, 1px de espalhamento na cor preto rgba  0 0 0 e .6 com 60% de transparencia, um preto com 60% de transparencia */
+    padding: 0px; /* Definindo o espaçamento de h1 em 0px para aproximar os texto de h1 e h2 */
+    margin-bottom: 0px; /* Definindo a margem-botom de h1, ou seja a margem de baixo pq os outros lados da margem já estão
+    na posição correta e como precisamos aproximar o h1 do h2, definimos os parametros apenas do magin-bottom em h1 e
+    margin-top, ou seja, a margem de cima em h2 */
+
+}
+
+/* Definindo as caracteristicas dos objetos h2 do cabeçalho */
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;/* Definindo o tamanho da fonte em 15 pontos */
+    color: #888888; /* Definindo a cor do texto em cinza um pouco claro */
+    padding: 0px; /* Definindo o espaçamento de h2 em 0px para aproximar os texto de h2 e h1 */
+    margin-top: 0px;/* Definindo a margem-top de h2, ou seja, a margem de cima pq os outros lados da margem já estão
+    na posição correta e como precisamos aproximar o h1 do h2, definimos os parametros apenas do magin-top em h2 e
+    margin-bottom, ou seja, a margem de baixo em h1 */
+}
+
+
+/* Formatação de imagens homem e mulher com legendas */
+figure.foto-legenda{
+    position: relative;
+    border: 8px solid white; /* Define uma borda na imagem de cor branca  */
+    box-shadow: 1px 1px 4px black; /* Define uma sombra na borda de cor preta */
+    width: 90%; /* Define o tamanho da borda em largura, ou seja, 45% do tamanho da pagina  */
+    height: 90%; /* Define o tamanho da borda em altura */
+}
+
+/* Define a imagens homem e mulher com legendas */
+figure.foto-legenda img{
+width: 100%; /* Define a largura da imagem */
+height: 100%; /* Define a altura da imagem */
+}
+
+
+figure.foto-legenda figcaption{
+    opacity: 0; /* Define que a legenda da foto fique transparente, ou seja, esconda a legenda, desta forma para
+    que o texto apareça será preciso definir "figure.foto-legenda:hover figcaption com opacity: 1, (1=100%)  */
+    position: absolute; /* Define da legenda de texto */
+    top: 0px; /* Define a legenda no topo da imagem */
+    background-color: rgba(0, 0, 0, .4); /* Define a cor de fundo da legenda em preto transparente para a imagem ficar visivel de fundo */
+    color: white; /* Define a cor do texto da legenda  */
+    width:100%; /* Define a largura do texto em 100% do tamanho da imagem */
+    height: 100%; /* Define a altura do texto em 100% do tamanho da imagem */
+    padding: 10px; /* Define um espaço em 10 pixels da imagem para a borda */
+    box-sizing: border-box; /* Define uma borda em volta na legenda */
+    transition: opacity 1s; /* Define a duração da transição ao passar o mouse sobre a foto */
+}
+
+/* Define que ao passar o mouse sobre a foto, seja mostrado o texto */
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+
+/* Formatação do Menu */
+
+/* Para que o menu flutue e fique na parte de cima é preciso defini-lo como um bloco  */
+nav#menu {
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none; /* Define o menu sem a marcação de bolinhas */
+    text-transform: uppercase; /* Define a letra do menu como todas maisculas */
+    position: absolute; /* Diferente da position: relative que faz com que as alterações ocorram apenas dentro do conteiner,
+    absolute define que eu posso colocar ele (menu) em qualquer possição na tela */
+    top: -20px; /* Define o espaço do menu com a pagina, deixando o menu colocado no topo da pagina  */
+    left: 500px; /* Define que o menu ficará em 300 pixels a esqueda da pagina */
+
+}
+
+nav#menu li {
+    display: inline-block; /* Define o menu em linha um do lado do outro */
+    background-color: #dddddd; /* Define a cor de fundo do menu em ciza clarinho */
+    padding: 10px; /* Define um espaço em 10 pixels do texto do menu */
+    margin: 2px; /* Define um espaço de 2 pixels entre cada item do texto, ou seja, do menu  */
+}
+
+/* Define a cor quando passamos o mouse sobre o menu */
+nav#menu li:hover {
+    background: #888888;
+
+}
+
+nav#menu h1{
+    display: none; /* Define que o titulo: Menu Principal, não apareça na pagina, ou seja, esconde ele,
+    mas ele continua sendo visto pelos mecanismos de pesquisa da web tipo Bing e Gonngle   */
+}
+
+/* Definindo as caracteristicas dos objetos em section que é o corpo do site  */
+section#corpo {
+    display: block; /* Define a section como um bloco */
+    width: 700px; /* Define a largura do corpo do site em 400px */
+    float: left; /* Definindo que os objetos em section que é o corpo do site, fique flutuando a esquerda do site,
+      isso só é possível porque definimos o section como um bloco */
+    border-right: 1px solid #606060 ; /* Define uma borda a direita do bloco, trassando uma linha divisoria entre
+    os blocos section e aside */
+    padding-right: 15px; /* Define um espaço de 15px do texto e da img para a linha lateral */
+}
+
+/* Definindo as caracteristicas dos objetos em article */
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px; /* Definindo o espaçamento entre os objetos em article, 1º parametro cima, 2º direita,
+      3º baixo, 4º esquerda */
+    margin: 10px 0px 10px 0px;
+}
+
+/* Definindo as caracteristicas dos objetos em article header#cabecalho-artigo h1 */
+header#cabecalho-artigo h1 {
+    font-family: FonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px; /* Definindo a margem de baixo em 0px para se aproximar do texto de baixo */
+}
+
+/* Definindo as caracteristicas dos objetos em article header#cabecalho-artigo h2 */
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece; /* Definindo o texto de cinza um pouco claro */
+    background-color: #ffffff; /* Definindo a cor de fundo como branco para retirar a cx cinza do texto */
+    margin: 0px; /* Definindo a margem em 0px para se aproximar do texto de cima */
+
+}
+
+/* Definindo as caracteristicas dos objetos em article header#cabecalho-artigo h3 */
+.direita {
+    text-align: right; /* Definindo h3 na posição a direita */
+}
+
+/* Definindo as caracteristicas dos objetos em tabela */
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Definindo as caracteristicas dos objetos em tabela com os parametros td */
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+/* Definindo as caracteristicas dos objetos em tabela com os parametros td class ce */
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    font-weight: bold;
+
+}
+
+/* Definindo as caracteristicas dos objetos em tabela com os parametros td class cd */
+table#tabelaspec td.cd {
+    background-color: #cecece;
+    vertical-align: top;
+
+}
+
+/* Definindo as caracteristicas dos objetos em tabela com os parametros caption */
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+/* Definindo as caracteristicas dos objetos em tabela com os parametros caption span */
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+/* Definindo as caracteristicas do conteiner onde fica o video 1 */
+div#filmeone{
+    padding: 10px;
+
+}
+
+/* Definindo as caracteristicas do video 1 */
+div#filmeone video#filme1 {
+    display: block; /* Definindo o video 1 como um bloco para que possa ser movimentado para o centro do conteiner pela margin */
+    border: 2px solid #ffffff; /* Definindo uma borda de cor branca no video 1 */
+    box-shadow: 1px 1px 4px black; /* Definindo uma sombra na borda do video 1 */
+    padding: 5px; /* Definindo um pequeno espaço entre o video e a borda do video 1 */
+    margin-left: auto; /* Definindo margem a esquerda e a direita auto para o video ficar centralizado no meio */
+    margin-right: auto; /* Definindo margem a esquerda e a direita auto para o video ficar centralizado no meio */
+
+}
+
+
+/* Definindo as caracteristicas dos objetos em aside que é o corpo lateral do site.
+    isso fará uma divisão no site */
+aside#lateral {
+    display: block; /* Define o aside como um bloco */
+    width: 450px; /* Define a largura do aside lateral do site em 400px */
+    float: right; /* Definindo que os objetos em aside, fique flutuando a direita do site, isso só é possível
+    porque definimos o aside como um bloco  */
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+/* Definindo as caracteristicas dos objetos em aside h1 */
+aside#lateral h1{
+    font-family: FonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+/* Definindo as caracteristicas dos objetos em aside h2 */
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+/* Definindo um espaço do video para a borda do footer */
+div#filmetwo {
+    padding: 20px;
+}
+
+/* Definindo as caracteristicas do video 2 */
+div#filmetwo video#filme2 {
+    border: 2px solid #ffffff; /* Definindo uma borda de cor branca no video 2 */
+    box-shadow: 1px 1px 4px black; /* Definindo uma sombra na borda do video 2 */
+    padding: 5px; /* Definindo um pequeno espaço entre o video e a borda do video 2 */
+
+
+}
+
+/* Definindo as caracteristicas dos objetos em footer que é o rodapé do site. Devido os objetos em section e em aside
+estar flutuando um a esquerda e outro a direito, isso faz o footer ficar deslocado dentro do site, por isso precisamos
+limpar toda essa divisão que foi feita para ele ficar na possição correta */
+footer#rodape {
+    clear: both; /* Define a limpeza dos dois lados para o footer, retirando ele do bloco e assim ele aparecer
+     na possição abaixo dos dois blocos asection e aside */
+    border-top: 1px solid #606060; /* Define uma linha no topo do footer, solida de cor cinza */
+}
+
+/* Defindo as caracteristicas dos objetos dentro do footer que são (p) paragrafos */
+footer#rodape p{
+    text-align: center; /* Define que todos os textos em (p) ficarão centralizado no site */
+}
