@@ -5,7 +5,7 @@
 /* Define uma fonte externa que podemos usar */
 @font-face {
     font-family: 'FonteLogo'; /* Define um nome para identificação */
-    src: url("../_fonts/bubblegum-sans-regular.otf"); /* Define a localização da fonte dentro do projeto */
+    src: url("../fonts/bubblegum-sans-regular.otf"); /* Define a localização da fonte dentro do projeto */
 }
 
 /* Define  */
@@ -55,7 +55,7 @@ header#cabecalho img#icone{
 header#cabecalho{
     border-bottom: 1px #606060 solid; /* Definindo uma linha em baixo do cabeçalho fina apenas 1px de cor cinza */
     height: 150px; /* Definindo a altura do cabeçalho em 150px */
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Definindo uma imagem com fundo do cabeçalho,
+    background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Definindo uma imagem com fundo do cabeçalho,
     porém devido a img ser pequena ela se repete varias vezes dentro do cabeçalho, e a função no-repeat não deixa isso ocorrer.
     A img fica no topo da pg e para colocarmos onde desejamos percisamos definir outros parametros deslocação lateral
     não será preciso por isso ficará em 0px e o deslocamento vertical que é o que precisamos, para descer a img até onde queremos
