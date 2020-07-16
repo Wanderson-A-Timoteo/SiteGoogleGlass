@@ -1,8 +1,3 @@
-# SiteGoogleGlass
-Site Google Glass
-https://wanderson-a-timoteo.github.io/SiteGoogleGlass/
-
-
 # <p align="center">  &nbsp; Google Glass &nbsp;   </p>
 
 [![HitCount](https://hits.dwyl.com/Wanderson-A-Timoteo/SiteGoogleGlass.svg)](https://github.com/Wanderson-A-Timoteo/SiteGoogleGlass)
