@@ -28,7 +28,7 @@ HTML é fácil de aprender - você vai se divertir!
 * [CSS3](https://www.w3schools.com/css/default.asp) - CSS é uma linguagem que descreve o estilo de um documento HTML.<br>
 CSS descreve como os elementos HTML devem ser exibidos.
 * [JavaScript](https://www.w3schools.com/js/default.asp) - JavaScript é a linguagem de programação.
-
+* [Node.js](https://nodejs.org/en/) - O Node.js é um ambiente de tempo de execução JavaScript de plataforma aberta e de código aberto que permite que os desenvolvedores escrevam ferramentas de linha de comando e scripts do lado de fora do navegador.
 
 ## Autor:
 
